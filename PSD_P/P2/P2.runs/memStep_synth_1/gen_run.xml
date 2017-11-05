@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="memStep_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1509640564">
+  <File Type="VDS-TIMING-PB" Name="memStep_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="memStep_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="memStep.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="memStep_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="memStep_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="memStep_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="memStep.vds"/>
+  <File Type="PA-TCL" Name="memStep.tcl"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/memStep">
+    <File Path="$PSRCDIR/sources_1/ip/memStep/memStep.xci">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../ipmems/memStep/memStep.xci"/>
+        <Attr Name="ImportTime" Val="1508949216"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/memStep.xcix">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../ipmems/memStep.xcix"/>
+        <Attr Name="ImportTime" Val="1508773804"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="memStep"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/memStep">
+    <File Path="$PSRCDIR/sources_1/ip/memStep/memStep.xci">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../ipmems/memStep/memStep.xci"/>
+        <Attr Name="ImportTime" Val="1508949216"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/memStep.xcix">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../ipmems/memStep.xcix"/>
+        <Attr Name="ImportTime" Val="1508773804"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="memStep"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

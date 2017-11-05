@@ -1,0 +1,16 @@
+0.6
+2016.4
+Jan 23 2017
+19:19:20
+/home/miguel/P2/P2.ip_user_files/ip/memA/sim/memA.v,1509637162,verilog,,,,memA,,,,,,,,
+/home/miguel/P2/P2.ip_user_files/ip/memB/sim/memB.v,1509637162,verilog,,,,memB,,,,,,,,
+/home/miguel/P2/P2.ip_user_files/ip/memC/sim/memC.v,1509637160,verilog,,,,memC,,,,,,,,
+/home/miguel/P2/P2.ip_user_files/ip/memRes/sim/memRes.v,1509635804,verilog,,,,memRes,,,,,,,,
+/home/miguel/P2/P2.ip_user_files/ip/memStep/sim/memStep.v,1509637160,verilog,,,,memStep,,,,,,,,
+/home/miguel/P2/P2.ip_user_files/ip/memXi/sim/memXi.v,1509637160,verilog,,,,memXi,,,,,,,,
+/home/miguel/P2/P2.sim/sim_1/behav/glbl.v,1485222234,verilog,,,,glbl,,,,,,,,
+/home/miguel/P2/P2.srcs/sim_1/imports/vhdl_P2/top_circuit_tb.vhd,1509642514,vhdl,,,,top_circuit_tb,,,,,,,,
+/home/miguel/P2/P2.srcs/sources_1/imports/lab2/control.vhd,1509467665,vhdl,,,,control,,,,,,,,
+/home/miguel/P2/P2.srcs/sources_1/imports/new/datapath.vhd,1509642247,vhdl,,,,datapath,,,,,,,,
+/home/miguel/P2/P2.srcs/sources_1/imports/vhdl_P2/circuit.vhdl,1509467629,vhdl,,,,circuit,,,,,,,,
+/home/miguel/P2/P2.srcs/sources_1/imports/vhdl_P2/top_circuit.vhd,1509377098,vhdl,,,,top_circuit,,,,,,,,

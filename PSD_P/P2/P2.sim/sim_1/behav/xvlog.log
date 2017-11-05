@@ -1,0 +1,14 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/miguel/P2/P2.ip_user_files/ip/memXi/sim/memXi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module memXi
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/miguel/P2/P2.ip_user_files/ip/memStep/sim/memStep.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module memStep
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/miguel/P2/P2.ip_user_files/ip/memRes/sim/memRes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module memRes
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/miguel/P2/P2.ip_user_files/ip/memC/sim/memC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module memC
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/miguel/P2/P2.ip_user_files/ip/memB/sim/memB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module memB
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/miguel/P2/P2.ip_user_files/ip/memA/sim/memA.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module memA
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/miguel/P2/P2.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

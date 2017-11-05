@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  "../../../P2.ip_user_files/ip/memXi/sim/memXi.v"
+verilog xil_defaultlib  "../../../P2.ip_user_files/ip/memStep/sim/memStep.v"
+verilog xil_defaultlib  "../../../P2.ip_user_files/ip/memRes/sim/memRes.v"
+verilog xil_defaultlib  "../../../P2.ip_user_files/ip/memC/sim/memC.v"
+verilog xil_defaultlib  "../../../P2.ip_user_files/ip/memB/sim/memB.v"
+verilog xil_defaultlib  "../../../P2.ip_user_files/ip/memA/sim/memA.v"
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

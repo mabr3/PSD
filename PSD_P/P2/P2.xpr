@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Product Version: Vivado v2016.4 (64-bit)              -->
+<!--                                                         -->
+<!-- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.   -->
+
+<Project Version="7" Minor="17" Path="/home/miguel/P2/P2.xpr">
+  <DefaultLaunch Dir="$PRUNDIR"/>
+  <Configuration>
+    <Option Name="Id" Val="3b10c7f17d1e4cb89b70044bc8b4f4f3"/>
+    <Option Name="Part" Val="xc7a35tcpg236-1"/>
+    <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
+    <Option Name="CompiledLibDirXSim" Val=""/>
+    <Option Name="CompiledLibDirModelSim" Val="$PCACHEDIR/compile_simlib/modelsim"/>
+    <Option Name="CompiledLibDirQuesta" Val="$PCACHEDIR/compile_simlib/questa"/>
+    <Option Name="CompiledLibDirIES" Val="$PCACHEDIR/compile_simlib/ies"/>
+    <Option Name="CompiledLibDirVCS" Val="$PCACHEDIR/compile_simlib/vcs"/>
+    <Option Name="CompiledLibDirRiviera" Val="$PCACHEDIR/compile_simlib/riviera"/>
+    <Option Name="CompiledLibDirActivehdl" Val="$PCACHEDIR/compile_simlib/activehdl"/>
+    <Option Name="TargetLanguage" Val="VHDL"/>
+    <Option Name="BoardPart" Val="digilentinc.com:basys3:part0:1.1"/>
+    <Option Name="ActiveSimSet" Val="sim_1"/>
+    <Option Name="DefaultLib" Val="xil_defaultlib"/>
+    <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
+    <Option Name="IPCachePermission" Val="read"/>
+    <Option Name="IPCachePermission" Val="write"/>
+    <Option Name="EnableCoreContainer" Val="FALSE"/>
+    <Option Name="CreateRefXciForCoreContainers" Val="FALSE"/>
+    <Option Name="IPUserFilesDir" Val="$PPRDIR/P2.ip_user_files"/>
+    <Option Name="IPStaticSourceDir" Val="$PPRDIR/P2.ip_user_files/ipstatic"/>
+    <Option Name="EnableBDX" Val="FALSE"/>
+    <Option Name="DSABoardId" Val="basys3"/>
+    <Option Name="DSANumComputeUnits" Val="16"/>
+    <Option Name="WTXSimLaunchSim" Val="238"/>
+    <Option Name="WTModelSimLaunchSim" Val="0"/>
+    <Option Name="WTQuestaLaunchSim" Val="0"/>
+    <Option Name="WTIesLaunchSim" Val="0"/>
+    <Option Name="WTVcsLaunchSim" Val="0"/>
+    <Option Name="WTRivieraLaunchSim" Val="0"/>
+    <Option Name="WTActivehdlLaunchSim" Val="0"/>
+    <Option Name="WTXSimExportSim" Val="12"/>
+    <Option Name="WTModelSimExportSim" Val="12"/>
+    <Option Name="WTQuestaExportSim" Val="12"/>
+    <Option Name="WTIesExportSim" Val="12"/>
+    <Option Name="WTVcsExportSim" Val="12"/>
+    <Option Name="WTRivieraExportSim" Val="12"/>
+    <Option Name="WTActivehdlExportSim" Val="12"/>
+    <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
+    <Option Name="XSimRadix" Val="hex"/>
+    <Option Name="XSimTimeUnit" Val="ns"/>
+    <Option Name="XSimArrayDisplayLimit" Val="64"/>
+    <Option Name="XSimTraceLimit" Val="65536"/>
+  </Configuration>
+  <FileSets Version="1" Minor="31">
+    <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+      <Filter Type="Srcs"/>
+      <File Path="$PSRCDIR/sources_1/imports/new/datapath.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../project_1_end/project_1_end.srcs/sources_1/new/datapath.vhd"/>
+          <Attr Name="ImportTime" Val="1507825727"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/lab2/control.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../project_1_end/project_1_end.srcs/sources_1/imports/lab2/control.vhd"/>
+          <Attr Name="ImportTime" Val="1507825377"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/vhdl_P2/circuit.vhdl">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../vhdl_P2/circuit.vhdl"/>
+          <Attr Name="ImportTime" Val="1508765687"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/vhdl_P2/top_circuit.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../vhdl_P2/top_circuit.vhd"/>
+          <Attr Name="ImportTime" Val="1508775003"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../ipmems/Xi.coe">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../ipmems/A.coe">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/ip/C.coe">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/ip/B.coe">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/ip/Step.coe">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/ip/Xi.coe">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/ip/A.coe">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="DesignMode" Val="RTL"/>
+        <Option Name="TopModule" Val="top_circuit"/>
+        <Option Name="TopAutoSet" Val="TRUE"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+      <Filter Type="Constrs"/>
+      <File Path="$PSRCDIR/constrs_1/imports/vhdl_P2/Constraints.xdc">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../vhdl_P2/Constraints.xdc"/>
+          <Attr Name="ImportTime" Val="1508767449"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="ConstrsType" Val="XDC"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
+      <Filter Type="Srcs"/>
+      <File Path="$PSRCDIR/sim_1/imports/vhdl_P2/top_circuit_tb.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../vhdl_P2/top_circuit_tb.vhd"/>
+          <Attr Name="ImportTime" Val="1508765206"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="DesignMode" Val="RTL"/>
+        <Option Name="TopModule" Val="top_circuit_tb"/>
+        <Option Name="TopLib" Val="xil_defaultlib"/>
+        <Option Name="TopAutoSet" Val="TRUE"/>
+        <Option Name="TransportPathDelay" Val="0"/>
+        <Option Name="TransportIntDelay" Val="0"/>
+        <Option Name="SimMode" Val="post-implementation"/>
+        <Option Name="SrcSet" Val="sources_1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="memC" Type="BlockSrcs" RelSrcDir="$PSRCDIR/memC">
+      <File Path="$PSRCDIR/sources_1/ip/memC.xcix">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ipmems/memC.xcix"/>
+          <Attr Name="ImportTime" Val="1508773782"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/ip/memC/memC.xci">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ipmems/memC/memC.xci"/>
+          <Attr Name="ImportTime" Val="1508949213"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="memC"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="memRes" Type="BlockSrcs" RelSrcDir="$PSRCDIR/memRes">
+      <File Path="$PSRCDIR/sources_1/ip/memRes.xcix">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ipmems/memRes.xcix"/>
+          <Attr Name="ImportTime" Val="1508748880"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/ip/memRes/memRes.xci">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ipmems/memRes/memRes.xci"/>
+          <Attr Name="ImportTime" Val="1508949213"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+        <CompFileExtendedInfo CompFileName="memRes.xci" FileRelPathName="memRes.veo"/>
+        <CompFileExtendedInfo CompFileName="memRes.xci" FileRelPathName="memRes.vho"/>
+        <CompFileExtendedInfo CompFileName="memRes.xci" FileRelPathName="synth/memRes.vhd"/>
+        <CompFileExtendedInfo CompFileName="memRes.xci" FileRelPathName="memRes.xml"/>
+        <CompFileExtendedInfo CompFileName="memRes.xci" FileRelPathName="memRes_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="memRes.xci" FileRelPathName="misc/blk_mem_gen_v8_3.vhd"/>
+        <CompFileExtendedInfo CompFileName="memRes.xci" FileRelPathName="hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd"/>
+        <CompFileExtendedInfo CompFileName="memRes.xci" FileRelPathName="sim/memRes.v"/>
+        <CompFileExtendedInfo CompFileName="memRes.xci" FileRelPathName="simulation/blk_mem_gen_v8_3.v"/>
+        <CompFileExtendedInfo CompFileName="memRes.xci" FileRelPathName="summary.log"/>
+        <CompFileExtendedInfo CompFileName="memRes.xci" FileRelPathName="doc/blk_mem_gen_v8_3_changelog.txt"/>
+        <CompFileExtendedInfo CompFileName="memRes.xci" FileRelPathName="memRes_stub.v"/>
+        <CompFileExtendedInfo CompFileName="memRes.xci" FileRelPathName="memRes_sim_netlist.v"/>
+        <CompFileExtendedInfo CompFileName="memRes.xci" FileRelPathName="memRes_stub.vhdl"/>
+        <CompFileExtendedInfo CompFileName="memRes.xci" FileRelPathName="memRes_sim_netlist.vhdl"/>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="memRes"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="memB" Type="BlockSrcs" RelSrcDir="$PSRCDIR/memB">
+      <File Path="$PSRCDIR/sources_1/ip/memB.xcix">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ipmems/memB.xcix"/>
+          <Attr Name="ImportTime" Val="1508773764"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/ip/memB/memB.xci">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ipmems/memB/memB.xci"/>
+          <Attr Name="ImportTime" Val="1508949214"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+        <CompFileExtendedInfo CompFileName="memB.xci" FileRelPathName="memB_stub.v"/>
+        <CompFileExtendedInfo CompFileName="memB.xci" FileRelPathName="memB_stub.vhdl"/>
+        <CompFileExtendedInfo CompFileName="memB.xci" FileRelPathName="memB.mif"/>
+        <CompFileExtendedInfo CompFileName="memB.xci" FileRelPathName="simulation/blk_mem_gen_v8_3.v"/>
+        <CompFileExtendedInfo CompFileName="memB.xci" FileRelPathName="sim/memB.v"/>
+        <CompFileExtendedInfo CompFileName="memB.xci" FileRelPathName="/home/miguel/P2/P2.srcs/sources_1/ip/B.coe"/>
+        <CompFileExtendedInfo CompFileName="memB.xci" FileRelPathName="synth/memB.vhd"/>
+        <CompFileExtendedInfo CompFileName="memB.xci" FileRelPathName="hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd"/>
+        <CompFileExtendedInfo CompFileName="memB.xci" FileRelPathName="memB_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="memB.xci" FileRelPathName="misc/blk_mem_gen_v8_3.vhd"/>
+        <CompFileExtendedInfo CompFileName="memB.xci" FileRelPathName="summary.log"/>
+        <CompFileExtendedInfo CompFileName="memB.xci" FileRelPathName="memB.veo"/>
+        <CompFileExtendedInfo CompFileName="memB.xci" FileRelPathName="memB.xml"/>
+        <CompFileExtendedInfo CompFileName="memB.xci" FileRelPathName="doc/blk_mem_gen_v8_3_changelog.txt"/>
+        <CompFileExtendedInfo CompFileName="memB.xci" FileRelPathName="memB.vho"/>
+        <CompFileExtendedInfo CompFileName="memB.xci" FileRelPathName="memB_sim_netlist.v"/>
+        <CompFileExtendedInfo CompFileName="memB.xci" FileRelPathName="memB_sim_netlist.vhdl"/>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="memB"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="memXi" Type="BlockSrcs" RelSrcDir="$PSRCDIR/memXi">
+      <File Path="$PSRCDIR/sources_1/ip/memXi.xcix">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ipmems/memXi.xcix"/>
+          <Attr Name="ImportTime" Val="1508773868"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/ip/memXi/memXi.xci">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ipmems/memXi/memXi.xci"/>
+          <Attr Name="ImportTime" Val="1508949214"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="memXi"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="memA" Type="BlockSrcs" RelSrcDir="$PSRCDIR/memA">
+      <File Path="$PSRCDIR/sources_1/ip/memA.xcix">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ipmems/memA.xcix"/>
+          <Attr Name="ImportTime" Val="1508773597"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/ip/memA/memA.xci">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ipmems/memA/memA.xci"/>
+          <Attr Name="ImportTime" Val="1508949215"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+        <CompFileExtendedInfo CompFileName="memA.xci" FileRelPathName="/home/miguel/P2/P2.srcs/sources_1/ip/A.coe"/>
+        <CompFileExtendedInfo CompFileName="memA.xci" FileRelPathName="memA.xml"/>
+        <CompFileExtendedInfo CompFileName="memA.xci" FileRelPathName="synth/memA.vhd"/>
+        <CompFileExtendedInfo CompFileName="memA.xci" FileRelPathName="hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd"/>
+        <CompFileExtendedInfo CompFileName="memA.xci" FileRelPathName="memA_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="memA.xci" FileRelPathName="sim/memA.v"/>
+        <CompFileExtendedInfo CompFileName="memA.xci" FileRelPathName="simulation/blk_mem_gen_v8_3.v"/>
+        <CompFileExtendedInfo CompFileName="memA.xci" FileRelPathName="memA.mif"/>
+        <CompFileExtendedInfo CompFileName="memA.xci" FileRelPathName="misc/blk_mem_gen_v8_3.vhd"/>
+        <CompFileExtendedInfo CompFileName="memA.xci" FileRelPathName="summary.log"/>
+        <CompFileExtendedInfo CompFileName="memA.xci" FileRelPathName="memA.veo"/>
+        <CompFileExtendedInfo CompFileName="memA.xci" FileRelPathName="memA.vho"/>
+        <CompFileExtendedInfo CompFileName="memA.xci" FileRelPathName="doc/blk_mem_gen_v8_3_changelog.txt"/>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="memA"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="memStep" Type="BlockSrcs" RelSrcDir="$PSRCDIR/memStep">
+      <File Path="$PSRCDIR/sources_1/ip/memStep.xcix">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ipmems/memStep.xcix"/>
+          <Attr Name="ImportTime" Val="1508773804"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/ip/memStep/memStep.xci">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ipmems/memStep/memStep.xci"/>
+          <Attr Name="ImportTime" Val="1508949216"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="memStep"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+  </FileSets>
+  <Simulators>
+    <Simulator Name="XSim">
+      <Option Name="Description" Val="Vivado Simulator"/>
+      <Option Name="CompiledLib" Val="0"/>
+    </Simulator>
+    <Simulator Name="ModelSim">
+      <Option Name="Description" Val="ModelSim Simulator"/>
+    </Simulator>
+    <Simulator Name="Questa">
+      <Option Name="Description" Val="Questa Advanced Simulator"/>
+    </Simulator>
+    <Simulator Name="IES">
+      <Option Name="Description" Val="Incisive Enterprise Simulator (IES)"/>
+    </Simulator>
+    <Simulator Name="VCS">
+      <Option Name="Description" Val="Verilog Compiler Simulator (VCS)"/>
+    </Simulator>
+    <Simulator Name="Riviera">
+      <Option Name="Description" Val="Riviera-PRO Simulator"/>
+    </Simulator>
+  </Simulators>
+  <Runs Version="1" Minor="10">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a35tcpg236-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="memC_synth_1" Type="Ft3:Synth" SrcSet="memC" Part="xc7a35tcpg236-1" ConstrsSet="memC" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/memC_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="memRes_synth_1" Type="Ft3:Synth" SrcSet="memRes" Part="xc7a35tcpg236-1" ConstrsSet="memRes" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/memRes_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="memB_synth_1" Type="Ft3:Synth" SrcSet="memB" Part="xc7a35tcpg236-1" ConstrsSet="memB" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/memB_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="memXi_synth_1" Type="Ft3:Synth" SrcSet="memXi" Part="xc7a35tcpg236-1" ConstrsSet="memXi" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/memXi_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="memA_synth_1" Type="Ft3:Synth" SrcSet="memA" Part="xc7a35tcpg236-1" ConstrsSet="memA" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/memA_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="memStep_synth_1" Type="Ft3:Synth" SrcSet="memStep" Part="xc7a35tcpg236-1" ConstrsSet="memStep" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/memStep_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="memC_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="memC" Description="Default settings for Implementation." SynthRun="memC_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="memRes_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="memRes" Description="Default settings for Implementation." SynthRun="memRes_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="memB_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="memB" Description="Default settings for Implementation." SynthRun="memB_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="memXi_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="memXi" Description="Default settings for Implementation." SynthRun="memXi_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="memA_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="memA" Description="Default settings for Implementation." SynthRun="memA_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="memStep_impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="memStep" Description="Default settings for Implementation." SynthRun="memStep_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+  </Runs>
+</Project>

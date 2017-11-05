@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="memB_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1509640442">
+  <File Type="VDS-TIMING-PB" Name="memB_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="memB_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="memB.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="memB_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="memB_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="memB_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="memB.vds"/>
+  <File Type="PA-TCL" Name="memB.tcl"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/memB">
+    <File Path="$PSRCDIR/sources_1/ip/memB/memB.xci">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../ipmems/memB/memB.xci"/>
+        <Attr Name="ImportTime" Val="1508949214"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/memB.xcix">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../ipmems/memB.xcix"/>
+        <Attr Name="ImportTime" Val="1508773764"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="memB"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/memB">
+    <File Path="$PSRCDIR/sources_1/ip/memB/memB.xci">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../ipmems/memB/memB.xci"/>
+        <Attr Name="ImportTime" Val="1508949214"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/memB.xcix">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../ipmems/memB.xcix"/>
+        <Attr Name="ImportTime" Val="1508773764"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="memB"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

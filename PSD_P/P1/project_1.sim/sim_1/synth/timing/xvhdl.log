@@ -1,0 +1,8 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/miguel/Desktop/Untitled Folder 2/project_1/project_1.srcs/sources_1/new/datapath.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity datapath
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/miguel/Desktop/Untitled Folder 2/project_1/project_1.srcs/sources_1/imports/lab2/control.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity control
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/miguel/Desktop/Untitled Folder 2/project_1/project_1.srcs/sources_1/imports/lab2/circuito.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity circuito
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/miguel/Desktop/Untitled Folder 2/project_1/project_1.srcs/sim_1/imports/lab2/circuito_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity circuito_tb

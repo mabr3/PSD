@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="memC_synth_1" LaunchDir="/home/miguel/P2/P2.runs/memC_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="memRes_synth_1" LaunchDir="/home/miguel/P2/P2.runs/memRes_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="memB_synth_1" LaunchDir="/home/miguel/P2/P2.runs/memB_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="memXi_synth_1" LaunchDir="/home/miguel/P2/P2.runs/memXi_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="memA_synth_1" LaunchDir="/home/miguel/P2/P2.runs/memA_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="memStep_synth_1" LaunchDir="/home/miguel/P2/P2.runs/memStep_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="/home/miguel/P2/P2.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="memC_synth_1"/>
+		<Parent Id="memRes_synth_1"/>
+		<Parent Id="memB_synth_1"/>
+		<Parent Id="memXi_synth_1"/>
+		<Parent Id="memA_synth_1"/>
+		<Parent Id="memStep_synth_1"/>
+	</Run>
+</Runs>
+

@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Thu Nov  2 18:04:58 2017
+# Process ID: 22003
+# Current directory: /home/miguel/P2/P2.runs/memA_synth_1
+# Command line: vivado -log memA.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source memA.tcl
+# Log file: /home/miguel/P2/P2.runs/memA_synth_1/memA.vds
+# Journal file: /home/miguel/P2/P2.runs/memA_synth_1/vivado.jou
+#-----------------------------------------------------------
+source memA.tcl -notrace
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP memA, cache-ID = 2f4179562668a2a3.

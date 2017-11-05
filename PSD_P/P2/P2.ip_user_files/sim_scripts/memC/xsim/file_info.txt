@@ -1,0 +1,2 @@
+memC.v,verilog,xil_defaultlib,../../../ip/memC/sim/memC.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v
