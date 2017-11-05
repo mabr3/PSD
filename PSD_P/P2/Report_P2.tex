@@ -1,0 +1,170 @@
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article} % A4 paper size, default 11pt font size and oneside for equal margins
+\usepackage[margin = 1in]{geometry}
+\usepackage[portuguese]{babel}
+
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage{fouriernc} % Use the New Century Schoolbook font
+\usepackage{graphicx}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begin{document} 
+
+\begin{titlepage} % Suppresses headers and footers on the title page
+
+	\begin{figure}[t]
+	\graphicspath{ {../../} }
+	\includegraphics[width = 8 cm]{logo.png}
+	\centering
+	\end{figure}
+	
+	\centering % Centre everything on the title page
+	
+	\scshape % Use small caps for all text on the title page
+	
+	\vspace*{\baselineskip} % White space at the top of the page
+	
+	%------------------------------------------------
+	%	Title
+	%------------------------------------------------
+	
+	\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} % Thick horizontal rule
+	\rule{\textwidth}{0.4pt} % Thin horizontal rule
+	
+	\vspace{0.75\baselineskip} % Whitespace above the title
+	
+	{\LARGE 2\textsuperscript{\underline{o}} Projeto:\\Scheduling and Resource Sharing\par} % Title
+	
+	\vspace{0.75\baselineskip} % Whitespace below the title
+	
+	\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt} % Thin horizontal rule
+	\rule{\textwidth}{1.6pt} % Thick horizontal rule
+	
+	\vspace{2\baselineskip} % Whitespace after the title block
+	
+	%------------------------------------------------
+	%	Subtitle
+	%------------------------------------------------
+	
+	 % Subtitle or further description
+	Projeto de Sistemas Digitais \\ Docente: Paulo Flores
+
+	\vspace*{3\baselineskip} % Whitespace under the subtitle
+	
+	%------------------------------------------------
+	%	Editor(s)
+	%------------------------------------------------
+	
+	
+	\vspace{0.5\baselineskip} % Whitespace before the editors
+	
+	{\scshape\Large Afonso Rodrigues N\textsuperscript{\underline{o}} 67528 \\ Afonso Pereira N\textsuperscript{\underline{o}} 78949 \\ Miguel Rodrigues 
+		N\textsuperscript{\underline{o}} 76176 \\} % Editor list
+	
+	\vspace{0.5\baselineskip} % Whitespace below the editor list
+	
+	\vfill % Whitespace between editor names and publisher logo
+	
+	\vspace{0.3\baselineskip} % Whitespace under the publisher logo
+	
+	08/11/2017 % Publication year
+
+\end{titlepage}
+
+\shipout\null %Blank Page without increasing page number 
+
+%----------------------------------------------------------------------------------------
+
+	
+	\section{Introdução}
+		Neste segundo projeto de laboratório são explorados os conceitos de gestão de recursos e calendarização, bem como o uso de memórias para receber dados e onde escrever dados.\\
+
+
+		\noindent Com o conhecimento adquirido no laboratório anterior em relação ao funcionamento do software Vivado e à linguagem de descrição de hardware VHDL, é criado um programa que resolva uma iteração de um algoritmo (Método do Gradiente) para encontrar um mínimo local de uma equação polinomial de segundo grau. Os valores de cada variável (A, B, C, Xi e Step) estão presentes em memórias em posições consecutivas de memória, com 10 bits, as quais são acedidas sequencialmente de modo a realizar a primeira iteração de quatro conjuntos diferentes de dados. Cada iteração do algoritmo dá origem a três resultados a guardar (dy, Xn e y), originando um total de 12 valores de 40 bits a guardar. Estes são armazenados em posições sequenciais numa única memória de saída.\\	
+
+		\noindent Considerando restrições de hardware, este projeto leva a que seja feita uma gestão e optimização dos recursos a utilizar que envolve calendarizar as operações a serem feitas, dando uso a diferentes recursos, como o \emph{ASAP Scheduling} ou a lista de prioridades.
+
+	\section{Scheduling}
+		Considerando apenas uma iteração do algoritmo completo, e admitindo que cada operação tem a duração de um ciclo de relógio, são obtidos os seguintes \emph{data flows} e lista de prioridades:
+
+		\subsection{ASAP Scheduling}
+			\emph{As Soon As Possible Scheduling}: Assim que seja possível realizar uma operação, esta é realizada, mesmo que o seu resultado só seja necessário muito tempo depois.
+
+
+			\begin{figure}[ht]
+				\begin{center}
+					\includegraphics[width=1.5in]{ASAP.pdf}
+					\caption{ASAP Scheduling}
+					\label{fig:ASAP}
+				\end{center}
+			\end{figure}
+			
+			\textbf{Nota:} Tanto a multiplicação por 2 como a divisão por $2^{18}$ não requerem o uso de recursos adicionais, visto que são ambos múltiplos de 2, constituem apenas \emph{shifts} à esquerda (multiplicação) ou à direita (divisão). 
+
+		\clearpage
+
+		\subsection{ALAP Scheduling}
+			\emph{As Late As Possible Scheduling}: As operações são realizadas o mais tarde possível sem afetar o número totald e ciclos de relógio (em comparação com o caso anterior), isto é, cada operação só se realiza no ciclo anterior a ser necessário o seu resultado.\\
+
+			\noindent Neste projeto, este diagrama não vai ser diferente do presente na secção anterior, pois nenhuma operação pode ser realizada mais tarde sem atrasar toda a iteração (e nenhuma poderia ter sido feita mais cedo na secção anterior).
+
+		\subsection{List Scheduling}
+		
+		A lista de prioridades usando o caminho crítico como métrica é a apresentada na Tabela~\ref{tab:Lsched}. Esta lista tem em conta que os recursos utilizados são os especificados: uma \emph{Arithmetic and Logic Unit} (com a sigla ALU na lista) e dois multiplicadores (com o símbolo X na lista).
+
+		\begin{table}[htbp]
+			\caption{List Scheduling}
+			\begin{center}
+				\begin{tabular}{|c||c||c|}
+					\hline
+					Nr & Operação & Prioridade \\
+					\hline
+					1 & X & 7 \\
+					\hline
+					2 & ALU & 6 \\
+					\hline
+					3 & X & 5 \\
+					\hline
+					4 & ALU & 4 \\
+					\hline
+					5 & X & 3 \\
+					\hline
+					6 & X & 3 \\
+					\hline
+					7 & X & 2 \\
+					\hline
+					8 & ALU & 2 \\
+					\hline
+					9 & ALU & 1 \\
+					\hline
+				\end{tabular}
+			\end{center}
+			\label{tab:Lsched}
+		\end{table}
+
+	\section{Circuito VHDl}
+		\subsection{Unidade de Controlo}
+			FSM, recursos, diagrama de estados talvez
+
+		\subsection{Datapath}
+			descrição datapath, o que faz, como faz, que recursos usa etc
+
+		\subsection{Diagrama de Blocos, Recursos e Especificações}
+			Recursos, area clock minimo -> 15 ns  freq max... etc
+
+		\subsection{Simulação}
+
+	\section{Pipelining}
+
+	\section{Conclusão}
+
+	
+\end{document}
