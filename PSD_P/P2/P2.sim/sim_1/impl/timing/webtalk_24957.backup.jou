@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Mon Nov  6 11:46:54 2017
+# Process ID: 24957
+# Current directory: /home/miguel/Desktop/PSD_Proj/PSD_P/P2/P2.sim/sim_1/impl/timing
+# Command line: wbtcv -mode batch -source /home/miguel/Desktop/PSD_Proj/PSD_P/P2/P2.sim/sim_1/impl/timing/xsim.dir/top_circuit_tb_time_impl/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/miguel/Desktop/PSD_Proj/PSD_P/P2/P2.sim/sim_1/impl/timing/webtalk.log
+# Journal file: /home/miguel/Desktop/PSD_Proj/PSD_P/P2/P2.sim/sim_1/impl/timing/webtalk.jou
+#-----------------------------------------------------------
+source /home/miguel/Desktop/PSD_Proj/PSD_P/P2/P2.sim/sim_1/impl/timing/xsim.dir/top_circuit_tb_time_impl/webtalk/xsim_webtalk.tcl -notrace

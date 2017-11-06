@@ -1,10 +1,10 @@
 // Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2016.4 (lin64) Build 1756540 Mon Jan 23 19:11:19 MST 2017
-// Date        : Thu Nov  2 17:54:09 2017
+// Date        : Mon Nov  6 11:46:03 2017
 // Host        : M running 64-bit Ubuntu 16.04.3 LTS
 // Command     : write_verilog -mode timesim -nolib -sdf_anno true -force -file
-//               /home/miguel/P2/P2.sim/sim_1/impl/timing/top_circuit_tb_time_impl.v
+//               /home/miguel/Desktop/PSD_Proj/PSD_P/P2/P2.sim/sim_1/impl/timing/top_circuit_tb_time_impl.v
 // Design      : top_circuit
 // Purpose     : This verilog netlist is a timing simulation representation of the design and should not be modified or
 //               synthesized. Please ensure that this netlist is used with the corresponding SDF file.

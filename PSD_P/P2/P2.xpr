@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="17" Path="/home/miguel/P2/P2.xpr">
+<Project Version="7" Minor="17" Path="/home/miguel/Desktop/PSD_Proj/PSD_P/P2/P2.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="3b10c7f17d1e4cb89b70044bc8b4f4f3"/>
@@ -30,7 +30,7 @@
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="basys3"/>
     <Option Name="DSANumComputeUnits" Val="16"/>
-    <Option Name="WTXSimLaunchSim" Val="238"/>
+    <Option Name="WTXSimLaunchSim" Val="239"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -55,7 +55,7 @@
       <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/sources_1/imports/new/datapath.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../project_1_end/project_1_end.srcs/sources_1/new/datapath.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../project_1_end/project_1_end.srcs/sources_1/new/datapath.vhd"/>
           <Attr Name="ImportTime" Val="1507825727"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -63,7 +63,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/lab2/control.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../project_1_end/project_1_end.srcs/sources_1/imports/lab2/control.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../project_1_end/project_1_end.srcs/sources_1/imports/lab2/control.vhd"/>
           <Attr Name="ImportTime" Val="1507825377"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -71,7 +71,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/vhdl_P2/circuit.vhdl">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../vhdl_P2/circuit.vhdl"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../vhdl_P2/circuit.vhdl"/>
           <Attr Name="ImportTime" Val="1508765687"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -79,19 +79,19 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/vhdl_P2/top_circuit.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../vhdl_P2/top_circuit.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../vhdl_P2/top_circuit.vhd"/>
           <Attr Name="ImportTime" Val="1508775003"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../ipmems/Xi.coe">
+      <File Path="$PPRDIR/../../../../ipmems/Xi.coe">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../ipmems/A.coe">
+      <File Path="$PPRDIR/../../../../ipmems/A.coe">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -137,7 +137,7 @@
       <Filter Type="Constrs"/>
       <File Path="$PSRCDIR/constrs_1/imports/vhdl_P2/Constraints.xdc">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../vhdl_P2/Constraints.xdc"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../vhdl_P2/Constraints.xdc"/>
           <Attr Name="ImportTime" Val="1508767449"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -151,7 +151,7 @@
       <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/sim_1/imports/vhdl_P2/top_circuit_tb.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../vhdl_P2/top_circuit_tb.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../vhdl_P2/top_circuit_tb.vhd"/>
           <Attr Name="ImportTime" Val="1508765206"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -171,7 +171,7 @@
     <FileSet Name="memC" Type="BlockSrcs" RelSrcDir="$PSRCDIR/memC">
       <File Path="$PSRCDIR/sources_1/ip/memC.xcix">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../ipmems/memC.xcix"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../ipmems/memC.xcix"/>
           <Attr Name="ImportTime" Val="1508773782"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -180,7 +180,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/ip/memC/memC.xci">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../ipmems/memC/memC.xci"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../ipmems/memC/memC.xci"/>
           <Attr Name="ImportTime" Val="1508949213"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -195,7 +195,7 @@
     <FileSet Name="memRes" Type="BlockSrcs" RelSrcDir="$PSRCDIR/memRes">
       <File Path="$PSRCDIR/sources_1/ip/memRes.xcix">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../ipmems/memRes.xcix"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../ipmems/memRes.xcix"/>
           <Attr Name="ImportTime" Val="1508748880"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -204,27 +204,12 @@
       </File>
       <File Path="$PSRCDIR/sources_1/ip/memRes/memRes.xci">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../ipmems/memRes/memRes.xci"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../ipmems/memRes/memRes.xci"/>
           <Attr Name="ImportTime" Val="1508949213"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="memRes.xci" FileRelPathName="memRes.veo"/>
-        <CompFileExtendedInfo CompFileName="memRes.xci" FileRelPathName="memRes.vho"/>
-        <CompFileExtendedInfo CompFileName="memRes.xci" FileRelPathName="synth/memRes.vhd"/>
-        <CompFileExtendedInfo CompFileName="memRes.xci" FileRelPathName="memRes.xml"/>
-        <CompFileExtendedInfo CompFileName="memRes.xci" FileRelPathName="memRes_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="memRes.xci" FileRelPathName="misc/blk_mem_gen_v8_3.vhd"/>
-        <CompFileExtendedInfo CompFileName="memRes.xci" FileRelPathName="hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd"/>
-        <CompFileExtendedInfo CompFileName="memRes.xci" FileRelPathName="sim/memRes.v"/>
-        <CompFileExtendedInfo CompFileName="memRes.xci" FileRelPathName="simulation/blk_mem_gen_v8_3.v"/>
-        <CompFileExtendedInfo CompFileName="memRes.xci" FileRelPathName="summary.log"/>
-        <CompFileExtendedInfo CompFileName="memRes.xci" FileRelPathName="doc/blk_mem_gen_v8_3_changelog.txt"/>
-        <CompFileExtendedInfo CompFileName="memRes.xci" FileRelPathName="memRes_stub.v"/>
-        <CompFileExtendedInfo CompFileName="memRes.xci" FileRelPathName="memRes_sim_netlist.v"/>
-        <CompFileExtendedInfo CompFileName="memRes.xci" FileRelPathName="memRes_stub.vhdl"/>
-        <CompFileExtendedInfo CompFileName="memRes.xci" FileRelPathName="memRes_sim_netlist.vhdl"/>
       </File>
       <Config>
         <Option Name="TopModule" Val="memRes"/>
@@ -234,7 +219,7 @@
     <FileSet Name="memB" Type="BlockSrcs" RelSrcDir="$PSRCDIR/memB">
       <File Path="$PSRCDIR/sources_1/ip/memB.xcix">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../ipmems/memB.xcix"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../ipmems/memB.xcix"/>
           <Attr Name="ImportTime" Val="1508773764"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -243,29 +228,12 @@
       </File>
       <File Path="$PSRCDIR/sources_1/ip/memB/memB.xci">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../ipmems/memB/memB.xci"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../ipmems/memB/memB.xci"/>
           <Attr Name="ImportTime" Val="1508949214"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="memB.xci" FileRelPathName="memB_stub.v"/>
-        <CompFileExtendedInfo CompFileName="memB.xci" FileRelPathName="memB_stub.vhdl"/>
-        <CompFileExtendedInfo CompFileName="memB.xci" FileRelPathName="memB.mif"/>
-        <CompFileExtendedInfo CompFileName="memB.xci" FileRelPathName="simulation/blk_mem_gen_v8_3.v"/>
-        <CompFileExtendedInfo CompFileName="memB.xci" FileRelPathName="sim/memB.v"/>
-        <CompFileExtendedInfo CompFileName="memB.xci" FileRelPathName="/home/miguel/P2/P2.srcs/sources_1/ip/B.coe"/>
-        <CompFileExtendedInfo CompFileName="memB.xci" FileRelPathName="synth/memB.vhd"/>
-        <CompFileExtendedInfo CompFileName="memB.xci" FileRelPathName="hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd"/>
-        <CompFileExtendedInfo CompFileName="memB.xci" FileRelPathName="memB_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="memB.xci" FileRelPathName="misc/blk_mem_gen_v8_3.vhd"/>
-        <CompFileExtendedInfo CompFileName="memB.xci" FileRelPathName="summary.log"/>
-        <CompFileExtendedInfo CompFileName="memB.xci" FileRelPathName="memB.veo"/>
-        <CompFileExtendedInfo CompFileName="memB.xci" FileRelPathName="memB.xml"/>
-        <CompFileExtendedInfo CompFileName="memB.xci" FileRelPathName="doc/blk_mem_gen_v8_3_changelog.txt"/>
-        <CompFileExtendedInfo CompFileName="memB.xci" FileRelPathName="memB.vho"/>
-        <CompFileExtendedInfo CompFileName="memB.xci" FileRelPathName="memB_sim_netlist.v"/>
-        <CompFileExtendedInfo CompFileName="memB.xci" FileRelPathName="memB_sim_netlist.vhdl"/>
       </File>
       <Config>
         <Option Name="TopModule" Val="memB"/>
@@ -275,7 +243,7 @@
     <FileSet Name="memXi" Type="BlockSrcs" RelSrcDir="$PSRCDIR/memXi">
       <File Path="$PSRCDIR/sources_1/ip/memXi.xcix">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../ipmems/memXi.xcix"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../ipmems/memXi.xcix"/>
           <Attr Name="ImportTime" Val="1508773868"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -284,7 +252,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/ip/memXi/memXi.xci">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../ipmems/memXi/memXi.xci"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../ipmems/memXi/memXi.xci"/>
           <Attr Name="ImportTime" Val="1508949214"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -299,7 +267,7 @@
     <FileSet Name="memA" Type="BlockSrcs" RelSrcDir="$PSRCDIR/memA">
       <File Path="$PSRCDIR/sources_1/ip/memA.xcix">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../ipmems/memA.xcix"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../ipmems/memA.xcix"/>
           <Attr Name="ImportTime" Val="1508773597"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -308,25 +276,12 @@
       </File>
       <File Path="$PSRCDIR/sources_1/ip/memA/memA.xci">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../ipmems/memA/memA.xci"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../ipmems/memA/memA.xci"/>
           <Attr Name="ImportTime" Val="1508949215"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="memA.xci" FileRelPathName="/home/miguel/P2/P2.srcs/sources_1/ip/A.coe"/>
-        <CompFileExtendedInfo CompFileName="memA.xci" FileRelPathName="memA.xml"/>
-        <CompFileExtendedInfo CompFileName="memA.xci" FileRelPathName="synth/memA.vhd"/>
-        <CompFileExtendedInfo CompFileName="memA.xci" FileRelPathName="hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd"/>
-        <CompFileExtendedInfo CompFileName="memA.xci" FileRelPathName="memA_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="memA.xci" FileRelPathName="sim/memA.v"/>
-        <CompFileExtendedInfo CompFileName="memA.xci" FileRelPathName="simulation/blk_mem_gen_v8_3.v"/>
-        <CompFileExtendedInfo CompFileName="memA.xci" FileRelPathName="memA.mif"/>
-        <CompFileExtendedInfo CompFileName="memA.xci" FileRelPathName="misc/blk_mem_gen_v8_3.vhd"/>
-        <CompFileExtendedInfo CompFileName="memA.xci" FileRelPathName="summary.log"/>
-        <CompFileExtendedInfo CompFileName="memA.xci" FileRelPathName="memA.veo"/>
-        <CompFileExtendedInfo CompFileName="memA.xci" FileRelPathName="memA.vho"/>
-        <CompFileExtendedInfo CompFileName="memA.xci" FileRelPathName="doc/blk_mem_gen_v8_3_changelog.txt"/>
       </File>
       <Config>
         <Option Name="TopModule" Val="memA"/>
@@ -336,7 +291,7 @@
     <FileSet Name="memStep" Type="BlockSrcs" RelSrcDir="$PSRCDIR/memStep">
       <File Path="$PSRCDIR/sources_1/ip/memStep.xcix">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../ipmems/memStep.xcix"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../ipmems/memStep.xcix"/>
           <Attr Name="ImportTime" Val="1508773804"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -345,7 +300,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/ip/memStep/memStep.xci">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../ipmems/memStep/memStep.xci"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../ipmems/memStep/memStep.xci"/>
           <Attr Name="ImportTime" Val="1508949216"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>

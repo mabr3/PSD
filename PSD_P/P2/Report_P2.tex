@@ -158,11 +158,34 @@
 			descrição datapath, o que faz, como faz, que recursos usa etc
 
 		\subsection{Diagrama de Blocos, Recursos e Especificações}
-			Recursos, area clock minimo -> 15 ns  freq max... etc
+		O diagrama de blocos presente na Figura~\ref{fig:Diagrama} descreve visualmente como funciona o datapath, recebendo os dados das memórias, o clk e o rst do circuito de topo e o oper do circuito de controlo. No entanto, recebe também outros sinais, como o valor dos contadores que vão decidir o endereço de memória onde escrever e o endereço onde ler.\\
 
-		\subsection{Simulação}
+		\noindent A área total deste circuito é constituída por 280 LUTs e 109 FFs. Quanto ao número de multiplexers, existem oito multiplexers a considerar, sendo que os restantes não são relevantes e são usados três registos no datapath, mas o número poderia ser reduzido para dois, pois a cada ciclo são gravados nos registos, no máximo, dois valores. Assim, olhando para a Figura~\ref{fig:ASAP}, as operações iniciais e as restantes do lado esquerdo poderiam estar gardadas em R1 e as duas do lado direito no registo R2, reduzindo o número de registos. No entanto, ter-se-ia de recorrer a diferentes multiplexers dos implementados.\\
+
+		\begin{figure}[htbp]
+			\begin{center}
+				\includegraphics[width=4in]{Block.pdf}
+				\caption{Diagrama de Blocos}
+				\label{fig:Diagrama}
+			\end{center}
+		\end{figure}
+
+		\noindent De acordo com os relatórios disponíveis após a síntese e implementação, com um período de clock de 11ns obtém-se um \emph{Total Negative Slack} de 0ns e um \emph{Worst Negative Slack} de 0.428ns, indicando um período adequado. No entanto, para que a \emph{Post-Implementation Timing Simulation} seja feita de forma correta, é necessário que o período a usar no \emph{testbench} seja de 15.0ns, originando uma frequência máxima de 66,(6) MHz. Nesta simulação é possível obter a latência do circuito, isto é, quanto tempo demora a iteração toda a ocorrer. Olhando para a Figura~\ref{fig:Sim}, feita com os dois primeiros conjuntos de valores disponibilizados e com os dois últimos e cujos resultados se apresentaram corretos, com recurso a cursores no momento em que é feito o reset e no momento em que o valor se torna realmente zero, infere-se que a latência é dada por 144.040 - 135.190 = 8.85ns.\\ 
+
+		\begin{figure}[ht]
+			\begin{center}
+				\includegraphics[width=6.5in]{sim.png}
+				\caption{Simulação}
+				\label{fig:Sim}
+			\end{center}
+		\end{figure}
+
 
 	\section{Pipelining}
+
+		Para melhorar a performance do circuito, é possível usar uma arquitetura de \emph{pipeline}, começando operações da iteração seguinte sem que a iteração atual esteja concluída. Sem utilizar recursos adicionais e admitindo que são usados apenas dois registos como referido na secção anterior, seria possível, apenas, encurtar um ciclo às restantes iterações após a primeira, pois como visto na Tabela~\ref{tab:Lsched}, é necessário o input de A até ao sexto ciclo, portanto a iteração seguinte só poderia começar no sétimo ciclo da iteração atual, onde se iria buscar o valor de A seguinte.\\
+
+		\noindent No entanto, usando recursos adicionais é possível melhorar a performance do circuito.
 
 	\section{Conclusão}
 
