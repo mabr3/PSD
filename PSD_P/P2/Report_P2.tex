@@ -150,7 +150,7 @@
 			\label{tab:Lsched}
 		\end{table}
 
-	\section{Circuito VHDl}
+	\section{Circuito VHDL}
 		\subsection{Unidade de Controlo}
 			FSM, recursos, diagrama de estados talvez
 
@@ -185,7 +185,7 @@
 
 		Para melhorar a performance do circuito, é possível usar uma arquitetura de \emph{pipeline}, começando operações da iteração seguinte sem que a iteração atual esteja concluída. Sem utilizar recursos adicionais e admitindo que são usados apenas dois registos como referido na secção anterior, seria possível, apenas, encurtar um ciclo às restantes iterações após a primeira, pois como visto na Tabela~\ref{tab:Lsched}, é necessário o input de A até ao sexto ciclo, portanto a iteração seguinte só poderia começar no sétimo ciclo da iteração atual, onde se iria buscar o valor de A seguinte.\\
 
-		\noindent No entanto, usando recursos adicionais é possível melhorar a performance do circuito.
+		\noindent No entanto, usando recursos adicionais é possível melhorar a performance do circuito, sendo que no máximo estas 4 iterações (inicialmente feitas em 4 * 7 = 28 ciclos,segundo a Figura~\ref{fig:ASAP}) seriam feitas em 10 ciclos. A partir do momento em que uma iteração passa para a segunda operação, a iteração seguinte começa, funcionando como uma linha de montagem. Para que tal ocorra, é necessário que se usem quatro multiplicadores (em vez de dois), pois simultaneamente podem estar em funcionamente, para diferentes iterações, os ciclos 3, 4, 5 e 6 e três ALUs, para os ciclos 4, 5, 6 e 7 ao mesmo tempo. É necessário, ainda que existam, em número muito superior, registos intermédios para guardar resultados e valores lidos da memória (que são diferentes para cada iteração) e multiplexers.
 
 	\section{Conclusão}
 
