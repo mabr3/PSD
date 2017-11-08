@@ -79,7 +79,7 @@
 
 \end{titlepage}
 
-\shipout\null %Blank Page without increasing page number 
+%\shipout\null %Blank Page without increasing page number -para imprimir. comentar na versão para entregar.
 
 %----------------------------------------------------------------------------------------
 
@@ -90,7 +90,7 @@
 
 		\noindent Com o conhecimento adquirido no laboratório anterior em relação ao funcionamento do software Vivado e à linguagem de descrição de hardware VHDL, é criado um programa que resolva uma iteração de um algoritmo (Método do Gradiente) para encontrar um mínimo local de uma equação polinomial de segundo grau. Os valores de cada variável (A, B, C, Xi e Step) estão presentes em memórias em posições consecutivas de memória, com 10 bits, as quais são acedidas sequencialmente de modo a realizar a primeira iteração de quatro conjuntos diferentes de dados. Cada iteração do algoritmo dá origem a três resultados a guardar (dy, Xn e y), originando um total de 12 valores de 40 bits a guardar. Estes são armazenados em posições sequenciais numa única memória de saída.\\	
 
-		\noindent Considerando restrições de hardware, este projeto leva a que seja feita uma gestão e optimização dos recursos a utilizar que envolve calendarizar as operações a serem feitas, dando uso a diferentes recursos, como o \emph{ASAP Scheduling} ou a lista de prioridades.
+		\noindent Considerando restrições de hardware, este projeto leva a que seja feita uma gestão e otimização dos recursos a utilizar que envolve calendarizar as operações a serem feitas, dando uso a diferentes recursos, como o \emph{ASAP Scheduling} ou a lista de prioridades.
 
 	\section{Scheduling}
 		Considerando apenas uma iteração do algoritmo completo, e admitindo que cada operação tem a duração de um ciclo de relógio, são obtidos os seguintes \emph{data flows} e lista de prioridades:
@@ -162,19 +162,19 @@
 			\end{center}
 		\end{figure}
 
-			\noindent Cada estado transmite ao datapath um diferente conjunto de operandos, \emph{oper}, que vai decidir que operações são feitas e que valores são guardados. Com dois contadores, a unidade de controlo transmite, também, osvalores do endereços de memória onde ler e onde escrever. O contador para a posição de memória de leitura é incrementado sempre que se está no estado \emph{s\_eight}, para que seja lido um novo conjunto de valores e é transmitido aodatapath, para que esta unidade leia os valores certos na realização das operações. Quanto à posição de memória de escrita, o contador é incrementado três vezes por iteração, nos estados \emph{s\_three}, \emph{s\_five} e \emph{s\_eight}, sendo que o sinal que permite a escrita na memória de saída passa a '1' nos estados imediatamente anteriores a estes (\emph{s\_two}, \emph{s\_four} e \emph{s\_seven}) e o sinal de \emph{done}, que indica o final da iteração, passa a '1' no último estado da iteração, \emph{s\_eight}.  
+			\noindent Cada estado transmite ao datapath um diferente conjunto de operandos, \emph{oper}, que vai decidir que operações são feitas e que valores são guardados. Com dois contadores, a unidade de controlo transmite, também, os valores do endereços de memória onde ler e onde escrever. O contador para a posição de memória de leitura é incrementado sempre que se está no estado \emph{s\_eight}, para que seja lido um novo conjunto de valores e é transmitido ao datapath, para que esta unidade leia os valores certos na realização das operações. Quanto à posição de memória de escrita, o contador é incrementado três vezes por iteração, nos estados \emph{s\_three}, \emph{s\_five} e \emph{s\_eight}, sendo que o sinal que permite a escrita na memória de saída passa a '1' nos estados imediatamente anteriores a estes (\emph{s\_two}, \emph{s\_four} e \emph{s\_seven}) e o sinal de \emph{done}, que indica o final da iteração, passa a '1' no último estado da iteração, \emph{s\_eight}.  
 
 
 		\subsection{Datapath}
-			Nesta unidade são feitas as operações necessárias para realizar o algoritmo. Os valores obtidos em cada operação são guardados em respetivos registos intermédios (R1 para o multiplicador 1, R2 para o multiplicador 2 e R3 para a ALU), de forma a serem usados na operação seguinte. Como exitem limitações no que toca a hardware de operações, são usados multiplexers para escolher as entradas do multiplicador 1 e da ALU, sendo que no caso do multiplicador 2 não é necessário, é feita apenas uma operação neste. Os valores iniciais de A, B, C, Xi e Step são lidos diretamente da respetiva memória.\\
+			Nesta unidade são feitas as operações necessárias para realizar o algoritmo. Os valores obtidos em cada operação são guardados em respetivos registos intermédios (R1 para o multiplicador 1, R2 para o multiplicador 2 e R3 para a ALU), de forma a serem usados na operação seguinte. Como existem limitações no que toca a hardware de operações, são usados multiplexers para escolher as entradas do multiplicador 1 e da ALU, sendo que no caso do multiplicador 2 não é necessário, é feita apenas uma operação neste. Os valores iniciais de A, B, C, Xi e Step são lidos diretamente da respetiva memória.\\
 
 			\noindent Com recurso aos sinais recebidos da unidade de controlo (\emph{oper} e \emph{cnt\_big}), são decididas que operações a realizar, quais as entradas a usar nos multiplicadores e ALU e quais valores a guardar nos registos, bem como a posição de memória a ler. Os valores a serem guardados na memória de resposta originam nesta unidade, mas só serão escritos em função do sinal de enable da unidade de controlo e da posição de memória dada pelo respetivo contador também na unidade de controlo.
 			
 
 		\subsection{Diagrama de Blocos, Recursos e Especificações}
-		O diagrama de blocos presente na Figura~\ref{fig:Diagrama} descreve visualmente como funciona o datapath, recebendo os dados das memórias, o clk e o rst do circuito de topo e o oper do circuito de controlo. No entanto, recebe também outros sinais, como o valor do contadore que vai decidir o endereço de memória onde ler.\\
+		O diagrama de blocos presente na Figura~\ref{fig:Diagrama} descreve visualmente como funciona o datapath, recebendo os dados das memórias, o clk e o rst do circuito de topo e o oper do circuito de controlo. No entanto, recebe também outros sinais, como o valor do contador que vai decidir o endereço de memória onde ler.\\
 
-		\noindent A área total deste circuito é constituída por 280 LUTs e 109 FFs. Quanto ao número de multiplexers, existem oito multiplexers a considerar, sendo que os restantes não são relevantes e são usados três registos no datapath, mas o número poderia ser reduzido para dois, pois a cada ciclo são gravados nos registos, no máximo, dois valores. Assim, olhando para a Figura~\ref{fig:ASAP}, as operações iniciais e as restantes do lado esquerdo poderiam estar gardadas em R1 e as duas do lado direito no registo R2, reduzindo o número de registos. No entanto, ter-se-ia de recorrer a diferentes multiplexers dos implementados.\\
+		\noindent A área total deste circuito é constituída por 280 LUTs e 109 FFs. Quanto ao número de multiplexers, existem oito multiplexers a considerar, sendo que os restantes não são relevantes e são usados três registos no datapath, mas o número poderia ser reduzido para dois, pois a cada ciclo são gravados nos registos, no máximo, dois valores. Assim, olhando para a Figura~\ref{fig:ASAP}, as operações iniciais e as restantes do lado esquerdo poderiam estar guardadas em R1 e as duas do lado direito no registo R2, reduzindo o número de registos. No entanto, ter-se-ia de recorrer a diferentes multiplexers dos implementados.\\
 
 		\begin{figure}[htbp]
 			\begin{center}
@@ -199,13 +199,15 @@
 
 		Para melhorar a performance do circuito, é possível usar uma arquitetura de \emph{pipeline}, começando operações da iteração seguinte sem que a iteração atual esteja concluída. Sem utilizar recursos adicionais e admitindo que são usados apenas dois registos como referido na secção anterior, seria possível, apenas, encurtar um ciclo às restantes iterações após a primeira, pois como visto na Tabela~\ref{tab:Lsched}, é necessário o input de A até ao sexto ciclo, portanto a iteração seguinte só poderia começar no sétimo ciclo da iteração atual, onde se iria buscar o valor de A seguinte.\\
 
+		\clearpage
+
 		\noindent No entanto, usando recursos adicionais é possível melhorar a performance do circuito, sendo que no máximo estas 4 iterações (inicialmente feitas em 4 * 7 = 28 ciclos,segundo a Figura~\ref{fig:ASAP}) seriam feitas em 10 ciclos. A partir do momento em que uma iteração passa para a segunda operação, a iteração seguinte começa, funcionando como uma linha de montagem. Para que tal ocorra, é necessário que se usem quatro multiplicadores (em vez de dois), pois simultaneamente podem estar em funcionamento, para diferentes iterações, os ciclos 3, 4, 5 e 6 e três ALUs, para os ciclos 4, 5, 6 e 7 ao mesmo tempo. É necessário, ainda, que existam em número superior registos intermédios para guardar resultados e valores lidos da memória (que são diferentes para cada iteração) e multiplexers para realizar as escolhas a fazer nas operações.
 
 	\section{Conclusão}
 
 		Com a realização deste trabalho laboratorial analisámos e aplicámos os conceitos de gestão de recursos, calendarização e listas de prioridades, e uso de memórias para ler e escrever dados. Deste modo, contribuiu para o aprofundamento da escrita, desenho e descrição de algoritmos em VHDL e da sua aplicação em sistemas mais complexos devido às restrições de hardware apresentadas.\\
 
-		\noindent Apresentando os resultados relativamente à calendarização, utilizámos os conceitos dos tipos ASAP e ALAP para desenhar os grafos correspondentes a um ciclo iteração do algoritmo, que verificámos serem iguais. No desenho e desenvolvimento do circuito em VHDL que implementa o algoritmo em estudo, cumprimos todos os requisitos e restrições de modo a obter um circuito com a melhor performance possível, como foi pedido, usando uma arquitectura FSMD. Demonstrando através de simulações, conseguimos uma frequência máxima de 66,(6) MHz e uma latência de 8,85 ns, utilizando  8 multiplexers e 3 registos, um clock de 11 ns na simulação de pré implementação e 15 ns na simulação de pós implementação. Na otimização do circuito usando pipelining, descrevemos que esta é possível com e sem recursos adicionais, sendo que sem recursos seria possível encurtar 1 ciclo por iteração e com recursos adicionais seria possível encurtar 18 ciclos no total.\\
+		\noindent Apresentando os resultados relativamente à calendarização, utilizámos os conceitos dos tipos ASAP e ALAP para desenhar os grafos correspondentes a um ciclo iteração do algoritmo, que verificámos serem iguais. No desenho e desenvolvimento do circuito em VHDL que implementa o algoritmo em estudo, cumprimos todos os requisitos e restrições de modo a obter um circuito com a melhor performance possível, como foi pedido, usando uma arquitetura FSMD. Demonstrando através de simulações, conseguimos uma frequência máxima de 66,(6) MHz e uma latência de 8,85 ns, utilizando  8 multiplexers e 3 registos, um clock de 11 ns na simulação de pré implementação e 15 ns na simulação de pós implementação. Na otimização do circuito usando pipelining, descrevemos que esta é possível com e sem recursos adicionais, sendo que sem recursos seria possível encurtar 1 ciclo por iteração e com recursos adicionais seria possível encurtar 18 ciclos no total.\\
 
 		\noindent Concluímos assim que os objetivos deste trabalho foram alcançados com sucesso, resolvendo todos os problemas propostos e abordando as temáticas e conceitos envolvidos.
 	
