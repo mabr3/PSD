@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="memA_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1509645897">
-  <File Type="PA-TCL" Name="memA.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="memA_drc_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="memA_utilization_synth.rpt"/>
   <File Type="RDS-RDS" Name="memA.vds"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="memA_timing_summary_synth.rpt"/>
   <File Type="VDS-TIMING-PB" Name="memA_timing_summary_synth.pb"/>
+  <File Type="PA-TCL" Name="memA.tcl"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="memA_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="memA.dcp"/>
   <File Type="RDS-UTIL-PB" Name="memA_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="memA_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="memA_drc_synth.rpt"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/memA">
     <File Path="$PSRCDIR/sources_1/ip/memA/memA.xci">
       <FileInfo>

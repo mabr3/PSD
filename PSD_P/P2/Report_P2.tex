@@ -184,7 +184,7 @@
 			\end{center}
 		\end{figure}
 
-		\noindent De acordo com os relatórios disponíveis após a síntese e implementação, com um período de clock de 11ns obtém-se um \emph{Total Negative Slack} de 0ns e um \emph{Worst Negative Slack} de 0.428ns, indicando um período adequado. No entanto, para que a \emph{Post-Implementation Timing Simulation} seja feita de forma correta, é necessário que o período a usar no \emph{testbench} seja de 15.0ns, originando uma frequência máxima de 66,(6) MHz. Nesta simulação é possível obter a latência do circuito, isto é, quanto tempo demora a iteração toda a ocorrer. Olhando para a Figura~\ref{fig:Sim}, feita com os dois primeiros conjuntos de valores disponibilizados e com os dois últimos e cujos resultados se apresentaram corretos, com recurso a cursores no momento em que é feito o reset e no momento em que o valor se torna realmente zero, infere-se que a latência é dada por 144.040 - 135.190 = 8.85ns.\\ 
+		\noindent De acordo com os relatórios disponíveis após a síntese e implementação, com um período de clock de 11ns obtém-se um \emph{Total Negative Slack} de 0ns e um \emph{Worst Negative Slack} de 0.428ns, indicando um período adequado. No entanto, para que a \emph{Post-Implementation Timing Simulation} seja feita de forma correta, é necessário que o período a usar no \emph{testbench} seja de 15.0ns, originando uma frequência máxima de 66,(6) MHz. Nesta simulação é possível obter a latência do circuito, isto é, quanto tempo demora a iteração toda a ocorrer. Olhando para a Figura~\ref{fig:Sim}, feita com os dois primeiros conjuntos de valores disponibilizados e com os dois últimos e cujos resultados se apresentaram corretos, com recurso a cursores no momento em que é feito o reset e no momento em que o valor de y é escrito, infere-se que a latência é dada por, aproximadamente, 262.046 - 158.763 = 102.283ns.\\ 
 
 		\begin{figure}[ht]
 			\begin{center}
@@ -199,9 +199,11 @@
 
 		Para melhorar a performance do circuito, é possível usar uma arquitetura de \emph{pipeline}, começando operações da iteração seguinte sem que a iteração atual esteja concluída. Sem utilizar recursos adicionais e admitindo que são usados apenas dois registos como referido na secção anterior, seria possível, apenas, encurtar um ciclo às restantes iterações após a primeira, pois como visto na Tabela~\ref{tab:Lsched}, é necessário o input de A até ao sexto ciclo, portanto a iteração seguinte só poderia começar no sétimo ciclo da iteração atual, onde se iria buscar o valor de A seguinte.\\
 
-		\clearpage
+		%\clearpage
 
-		\noindent No entanto, usando recursos adicionais é possível melhorar a performance do circuito, sendo que no máximo estas 4 iterações (inicialmente feitas em 4 * 7 = 28 ciclos,segundo a Figura~\ref{fig:ASAP}) seriam feitas em 10 ciclos. A partir do momento em que uma iteração passa para a segunda operação, a iteração seguinte começa, funcionando como uma linha de montagem. Para que tal ocorra, é necessário que se usem quatro multiplicadores (em vez de dois), pois simultaneamente podem estar em funcionamento, para diferentes iterações, os ciclos 3, 4, 5 e 6 e três ALUs, para os ciclos 4, 5, 6 e 7 ao mesmo tempo. É necessário, ainda, que existam em número superior registos intermédios para guardar resultados e valores lidos da memória (que são diferentes para cada iteração) e multiplexers para realizar as escolhas a fazer nas operações.
+		\noindent No entanto, usando recursos adicionais é possível melhorar a performance do circuito, sendo que no máximo estas quatro iterações (inicialmente feitas em 4 * 7 = 28 ciclos,segundo a Figura~\ref{fig:ASAP}) seriam feitas em 10 ciclos. A partir do momento em que uma iteração passa para a segunda operação, a iteração seguinte começa, funcionando como uma linha de montagem. Para que tal ocorra, é necessário que se usem quatro multiplicadores (em vez de dois), pois simultaneamente podem estar em funcionamento, para diferentes iterações, os ciclos 3, 4, 5 e 6 e três ALUs, para os ciclos 4, 5, 6 e 7 ao mesmo tempo. É necessário, ainda, que existam em número superior registos intermédios para guardar resultados e valores lidos da memória (que são diferentes para cada iteração) e multiplexers para realizar as escolhas a fazer nas operações.\\
+
+		\noindent Um rascunho do projeto utilizando pipeline está representado no Anexo 1.
 
 	\section{Conclusão}
 
@@ -210,5 +212,15 @@
 		\noindent Apresentando os resultados relativamente à calendarização, utilizámos os conceitos dos tipos ASAP e ALAP para desenhar os grafos correspondentes a um ciclo iteração do algoritmo, que verificámos serem iguais. No desenho e desenvolvimento do circuito em VHDL que implementa o algoritmo em estudo, cumprimos todos os requisitos e restrições de modo a obter um circuito com a melhor performance possível, como foi pedido, usando uma arquitetura FSMD. Demonstrando através de simulações, conseguimos uma frequência máxima de 66,(6) MHz e uma latência de 8,85 ns, utilizando  8 multiplexers e 3 registos, um clock de 11 ns na simulação de pré implementação e 15 ns na simulação de pós implementação. Na otimização do circuito usando pipelining, descrevemos que esta é possível com e sem recursos adicionais, sendo que sem recursos seria possível encurtar 1 ciclo por iteração e com recursos adicionais seria possível encurtar 18 ciclos no total.\\
 
 		\noindent Concluímos assim que os objetivos deste trabalho foram alcançados com sucesso, resolvendo todos os problemas propostos e abordando as temáticas e conceitos envolvidos.
+	\clearpage
+
+
+	\begin{figure}[htbp]
+			\begin{center}
+				Anexo 1
+				\includegraphics[width=6in]{Pip001.pdf}
+			\end{center}
+		\end{figure}
+
 	
 \end{document}

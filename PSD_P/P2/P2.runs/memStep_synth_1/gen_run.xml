@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="memStep_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1509640564">
-  <File Type="PA-TCL" Name="memStep.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="memStep_drc_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="memStep_utilization_synth.rpt"/>
   <File Type="RDS-RDS" Name="memStep.vds"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="memStep_timing_summary_synth.rpt"/>
   <File Type="VDS-TIMING-PB" Name="memStep_timing_summary_synth.pb"/>
+  <File Type="PA-TCL" Name="memStep.tcl"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="memStep_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="memStep.dcp"/>
   <File Type="RDS-UTIL-PB" Name="memStep_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="memStep_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="memStep_drc_synth.rpt"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/memStep">
     <File Path="$PSRCDIR/sources_1/ip/memStep/memStep.xci">
       <FileInfo>

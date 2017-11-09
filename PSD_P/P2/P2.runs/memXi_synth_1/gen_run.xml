@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="memXi_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1509640675">
-  <File Type="PA-TCL" Name="memXi.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="memXi_drc_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="memXi_utilization_synth.rpt"/>
   <File Type="RDS-RDS" Name="memXi.vds"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="memXi_timing_summary_synth.rpt"/>
   <File Type="VDS-TIMING-PB" Name="memXi_timing_summary_synth.pb"/>
+  <File Type="PA-TCL" Name="memXi.tcl"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="memXi_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="memXi.dcp"/>
   <File Type="RDS-UTIL-PB" Name="memXi_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="memXi_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="memXi_drc_synth.rpt"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/memXi">
     <File Path="$PSRCDIR/sources_1/ip/memXi/memXi.xci">
       <FileInfo>
