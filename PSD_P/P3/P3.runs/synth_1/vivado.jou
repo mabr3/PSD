@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Sat Nov 25 13:02:19 2017
+# Process ID: 14488
+# Current directory: /home/miguel/Desktop/P3/P3.runs/synth_1
+# Command line: vivado -log fpga_basicIO.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fpga_basicIO.tcl
+# Log file: /home/miguel/Desktop/P3/P3.runs/synth_1/fpga_basicIO.vds
+# Journal file: /home/miguel/Desktop/P3/P3.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source fpga_basicIO.tcl -notrace
